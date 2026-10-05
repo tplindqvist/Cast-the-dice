@@ -28,7 +28,7 @@ class Program
                         Console.Write(".");
                         Thread.Sleep(100);
                     }
-                    Console.WriteLine("");
+                    Console.WriteLine();
                     Console.Clear();
 
 
@@ -88,8 +88,8 @@ Reglerna är enkla: Kasta tärningarna tills båda landar på 6..
     }
     static void ShowMenu()
     {
-        Console.WriteLine("");
+        Console.WriteLine();
         Console.WriteLine("[Space] Kasta [X] Avsluta");
-        Console.WriteLine("");
+        Console.WriteLine();
     }
 }
