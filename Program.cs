@@ -4,7 +4,6 @@ class Program
 {
     static void Main()
     {
-        // Aktiverar stöd för UTF-8 så emojis/specialtecken visas korrekt i konsolen
         Console.OutputEncoding = System.Text.Encoding.UTF8;
         WelcomeMessage();
         ShowMenu();
@@ -23,19 +22,18 @@ class Program
             {
                 // Fejk-laddning som simulerar känslan av att tärningarna rullar.
                 case ConsoleKey.Spacebar:
-                    Console.Write("Kastar tärningarna [");
+                    Console.Write("Kastar tärningarna");
                     for (int i = 0; i < 5; i++)
                     {
                         Console.Write(".");
                         Thread.Sleep(100);
                     }
-                    Console.WriteLine("]");
-                    Console.WriteLine("─────────────────────────");
+                    Console.WriteLine("");
+                    Console.Clear();
 
 
 
-                    Console.WriteLine($"🎲 {dice1}");
-                    Console.WriteLine($"🎲 {dice1}");
+                    Console.Write($"🎲 {dice1} + 🎲 {dice2} = {dice1 + dice2}  -->  ");
 
                     break;
 
@@ -55,14 +53,12 @@ class Program
 
             if (dice1 + dice2 == 12)
             {
-                Console.WriteLine("─────────────────────────");
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Grattis 🥳 Du har vunnit!");
                 Console.ResetColor();
             }
             else
             {
-                Console.WriteLine("─────────────────────────");
                 Console.ForegroundColor = ConsoleColor.DarkYellow;
                 Console.WriteLine("Försök igen!");
                 Console.ResetColor();
@@ -92,8 +88,8 @@ Reglerna är enkla: Kasta tärningarna tills båda landar på 6..
     }
     static void ShowMenu()
     {
-        Console.WriteLine("─────────────────────────");
+        Console.WriteLine("");
         Console.WriteLine("[Space] Kasta [X] Avsluta");
-        Console.WriteLine("─────────────────────────");
+        Console.WriteLine("");
     }
 }
